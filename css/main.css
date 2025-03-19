@@ -1,0 +1,143 @@
+/* Estilos básicos */
+body {
+  font-family: helvetica, sans-serif;
+  background-color: #ffc6d1;
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "OCR-A";
+  src: url("../assets/fonts/OCRA.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Machine-regular";
+  src: url("../assets/fonts/Machine-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+h1:hover {
+  background-color: #ff1493; /* Darker pink on hover */
+}
+h1 {
+  color: #000000;
+}
+h1 {
+  font-size: 5em;
+}
+h1 {
+  font-weight: bolder;
+}
+h1 {
+  text-align: top;
+}
+h1 {
+  text-align: center;
+}
+h1 {
+  text-align: center;
+}
+
+h1 {
+  background-color: #adfd67;
+}
+h2,
+h3 {
+  color: #b01414;
+}
+
+section {
+  color: #ff70b0;
+}
+nav {
+  color: #000000;
+}
+#incio {
+  font-weight: bolder;
+}
+#brat {
+  padding: 10px;
+  margin: 20px;
+}
+
+main {
+  padding: 10px;
+  margin: 20px;
+}
+nav {
+  padding: 10px;
+  margin: 20px;
+}
+h1 {
+  padding: 0px;
+  margin: 0px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+h2 {
+  font-family: "OCR-A";
+}
+p {
+  font-family: "OCR-B";
+}
+p::first-letter {
+  font-size: 2rem;
+  color: rgb(237, 0, 119);
+}
+h1 {
+  animation: flashBackground 1s infinite alternate;
+}
+@keyframes flashBackground {
+  0% {
+    background-color: #adfd67;
+  }
+  100% {
+    background-color: #ff1493; /* Darker pink */
+  }
+}
+h1::before {
+  content: "💕 ";
+}
+
+h1::after {
+  content: " 💕";
+}
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item {
+  flex: 1;
+  padding: 10px;
+  background-color: #ffc6d1;
+}
+p {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.rectangle-button {
+  font-family: helvetica, sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  background-color: #ff69b4; /* Hot pink color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* Slightly rounded corners */
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.rectangle-button:hover {
+  background-color: #ff1493; /* Darker pink on hover */
+}
