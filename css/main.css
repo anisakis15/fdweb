@@ -1,7 +1,7 @@
 /* Estilos básicos */
 body {
   font-family: helvetica, sans-serif;
-  background-color: #ffc6d1;
+  background-color: #ffc3cf;
   margin: 0;
   padding: 0;
 }
@@ -16,9 +16,6 @@ body {
   src: url("../assets/fonts/Machine-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
-}
-h1:hover {
-  background-color: #ff1493; /* Darker pink on hover */
 }
 h1 {
   color: #000000;
@@ -93,7 +90,7 @@ p::first-letter {
   color: rgb(237, 0, 119);
 }
 h1 {
-  animation: flashBackground 1s infinite alternate;
+  animation: flashBackground 0.3s infinite alternate;
 }
 @keyframes flashBackground {
   0% {
@@ -140,4 +137,7 @@ p {
 
 .rectangle-button:hover {
   background-color: #ff1493; /* Darker pink on hover */
+}
+label {
+  display: right;
 }
