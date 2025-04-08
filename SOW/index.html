@@ -6,6 +6,14 @@
     <title>ANÁLISIS DE PÁGINAS WEB</title>
     <link rel="icon" href="favicon/favicon copia.ico" type="image/x-icon" />
     <style>
+      .image-container {
+        position: relative;
+        text-align: center;
+      }
+      .image-container img {
+        width: 100%; /* Make the image responsive */
+        height: auto;
+      }
       h2.content-title a {
         text-decoration: none;
         color: inherit;
@@ -40,7 +48,7 @@
         transition: background-color 0.3s;
       }
       .navbar a:hover {
-        background-color: #f95d87;
+        background-color: #ffffff;
         border-radius: 5px;
       }
       body {
@@ -52,11 +60,55 @@
         padding-top: 50px;
       }
       .main-title {
-        margin: 10px;
-        padding: 1rem;
-        font-size: 2em;
+        margin: 0px;
+        padding: 0, 5rem;
+        font-size: 9em;
         font-weight: bold;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Adjust for perfect centering */
+        color: rgb(255, 255, 255);
+        -webkit-text-stroke: 2px black; /* Ensure the text is visible */
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        animation: sideToSide 2s steps(5) infinite;
       }
+      .main-title.lag1 {
+        animation-delay: 0.2s;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .main-title.lag2 {
+        animation-delay: 0.4s;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .main-title.lag3 {
+        animation-delay: 0.6s;
+        color: rgba(255, 255, 255, 0.4);
+      }
+
+      .main-title.lag4 {
+        animation-delay: 0.8s;
+        color: rgba(255, 255, 255, 0.2);
+      }
+
+      .main-title.lag5 {
+        animation-delay: 1s;
+        color: rgba(255, 255, 255, 0.1);
+      }
+      @keyframes sideToSide {
+        0% {
+          transform: translate(-50%, -50%);
+        }
+        50% {
+          transform: translate(calc(-50% + 30px), -50%);
+        }
+        100% {
+          transform: translate(-50%, -50%);
+        }
+      }
+
       .content-section {
         margin: 10px auto;
         padding: 2rem;
@@ -82,7 +134,14 @@
       <a href="#web3">Web 3</a>
       <a href="#web4">Web 4</a>
     </div>
-    <h1 class="main-title">Análisis de Páginas Web</h1>
+    <div class="image-container">
+      <img src="images/fondo sow.png" alt="Background Image" />
+    </div>
+    <h1 class="main-title lag5">ANÁLISIS DE PÁGINAS WEB</h1>
+    <h1 class="main-title lag4">ANÁLISIS DE PÁGINAS WEB</h1>
+    <h1 class="main-title lag3">ANÁLISIS DE PÁGINAS WEB</h1>
+    <h1 class="main-title lag2">ANÁLISIS DE PÁGINAS WEB</h1>
+    <h1 class="main-title lag1">ANÁLISIS DE PÁGINAS WEB</h1>
     <div id="intro" class="content-section">
       <h2 class="content-title">Intro</h2>
       <p class="content-body">This is the introduction section.</p>
