@@ -1,65 +1,212 @@
 <!DOCTYPE html>
-<html lang="es"></html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ANÁLISIS DE PÁGINAS WEB</title>
+    <link rel="icon" href="favicon/favicon copia.ico" type="image/x-icon" />
     <style>
-        @font-face {
-            font-family: 'Helvetica';
-            src: local('Helvetica'), local('Arial'), sans-serif;
-        }
-        body {
-            font-family: Helvetica, sans-serif,;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #ffa7be; /* Light gray background color */
-        }
-        .main-title {
-            margin: 10px;
-            padding: 1rem;
-            font-size: 2em;
-            font-weight: bold;
-        }
-        .content-section {
-            margin: 10px auto;
-            padding: 2rem;
-            max-width: 1080px;
-            text-align: left;
-        }
-        .content-title {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .content-body {
-            font-size: 1em;
-            line-height: 1.6;
-        }
+      h2.content-title a {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.3s ease;
+      }
+      h2.content-title a:hover {
+        color: #d0053b;
+      }
+      @font-face {
+        font-family: "Helvetica";
+        src: local("Helvetica"), local("Arial"), sans-serif;
+      }
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffa7be;
+        color: white;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        z-index: 1000;
+        border-bottom: 1px solid black;
+      }
+      .navbar a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 5px 10px;
+        transition: background-color 0.3s;
+      }
+      .navbar a:hover {
+        background-color: #f95d87;
+        border-radius: 5px;
+      }
+      body {
+        font-family: Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color: #ffbbcd; /* Light gray background color */
+        padding-top: 50px;
+      }
+      .main-title {
+        margin: 10px;
+        padding: 1rem;
+        font-size: 2em;
+        font-weight: bold;
+      }
+      .content-section {
+        margin: 10px auto;
+        padding: 2rem;
+        max-width: 1080px;
+        text-align: left;
+      }
+      .content-title {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .content-body {
+        font-size: 1em;
+        line-height: 1.6;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="#intro">Intro</a>
+      <a href="#web1">Web 1</a>
+      <a href="#web2">Web 2</a>
+      <a href="#web3">Web 3</a>
+      <a href="#web4">Web 4</a>
+    </div>
     <h1 class="main-title">Análisis de Páginas Web</h1>
-    
-    <div class="content-section">
-        <h2 class="content-title">Web 1</h2>
-        <p class="content-body">This is the body of text for the first section. It contains some descriptive content.</p>
+    <div id="intro" class="content-section">
+      <h2 class="content-title">Intro</h2>
+      <p class="content-body">This is the introduction section.</p>
     </div>
-    
-    <div class="content-section">
-        <h2 class="content-title">Web 2</h2>
-        <p class="content-body">This is the body of text for the second section. It contains some descriptive content.</p>
+    <div id="web1" class="content-section">
+      <h2 class="content-title">
+        <a
+          href="https://www.rayraylab.com"
+          target="_blank"
+          style="text-decoration: none; color: inherit"
+          >Web 1</a
+        >
+      </h2>
+      <p class="content-body">
+        This is the body of text for the first section. It contains some
+        descriptive content.
+      </p>
     </div>
-    
-    <div class="content-section">
-        <h2 class="content-title">Web 3</h2>
-        <p class="content-body">This is the body of text for the third section. It contains some descriptive content.</p>
+    <iframe
+      src="https://www.rayraylab.com"
+      width="90%"
+      height="400"
+      style="
+        border: none;
+        margin-top: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        flex: center;
+      "
+    >
+    </iframe>
+    <div id="web2" class="content-section">
+      <h2 class="content-title">
+        <a
+          href="https://gehry.getty.edu"
+          target="_blank"
+          style="text-decoration: none; color: inherit"
+          >Web 2</a
+        >
+      </h2>
+      <p class="content-body">
+        This is the body of text for the second section. It contains some
+        descriptive content. This is the body of text for the second section. It
+        contains some descriptive content. This is the body of text for the
+        second section. It contains some descriptive content. This is the body
+        of text for the second section. It contains some descriptive content.
+        This is the body of text for the second section. It contains some
+        descriptive content. This is the body of text for the second section. It
+        contains some descriptive content. This is the body of text for the
+        second section. It contains some descriptive content. This is the body
+        of text for the second section. It contains some descriptive content.
+        This is the body of text for the second section. It contains some
+        descriptive content. This is the body of text for the second section. It
+        contains some descriptive content. This is the body of text for the
+        second section. It contains some descriptive content. This is the body
+        of text for the second section. It contains some descriptive content.
+      </p>
     </div>
-    
-    <div class="content-section">
-        <h2 class="content-title">Web 4</h2>
-        <p class="content-body">This is the body of text for the fourth section. It contains some descriptive content.</p>
+    <iframe
+      src="https://gehry.getty.edu"
+      width="90%"
+      height="400"
+      style="
+        border: none;
+        margin-top: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        flex: center;
+      "
+    >
+    </iframe>
+    <div id="web3" class="content-section">
+      <h2 class="content-title">
+        <a
+          href="https://www.madebynull.com"
+          target="_blank"
+          style="text-decoration: none; color: inherit"
+          >Web 3</a
+        >
+      </h2>
+      <p class="content-body">
+        This is the body of text for the third section. It contains some
+        descriptive content.
+      </p>
     </div>
-</body>
+    <iframe
+      src="https://www.madebynull.com"
+      width="90%"
+      height="400"
+      style="
+        border: none;
+        margin-top: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        flex: center;
+      "
+    >
+    </iframe>
+    <div id="web4" class="content-section">
+      <h2 class="content-title">
+        <a
+          href="https://www.dolsten.com"
+          target="_blank"
+          style="text-decoration: none; color: inherit"
+          >Web 4</a
+        >
+      </h2>
+      <p class="content-body">
+        This is the body of text for the fourth section. It contains some
+        descriptive content.
+      </p>
+    </div>
+    <iframe
+      src="https://www.dolsten.com"
+      width="90%"
+      height="400"
+      style="
+        border: none;
+        margin-top: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        flex: center;
+      "
+    >
+    </iframe>
+  </body>
 </html>
