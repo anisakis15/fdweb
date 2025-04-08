@@ -14,14 +14,6 @@
         width: 100%; /* Make the image responsive */
         height: auto;
       }
-      h2.content-title a {
-        text-decoration: none;
-        color: inherit;
-        transition: color 0.3s ease;
-      }
-      h2.content-title a:hover {
-        color: #d0053b;
-      }
       @font-face {
         font-family: "Helvetica";
         src: local("Helvetica"), local("Arial"), sans-serif;
@@ -59,10 +51,17 @@
         background-color: #ffbbcd; /* Light gray background color */
         padding-top: 50px;
       }
+      .main-title-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
       .main-title {
         margin: 0px;
         padding: 0, 5rem;
-        font-size: 9em;
+        font-size: 8em;
         font-weight: bold;
         position: absolute;
         top: 55%;
@@ -112,11 +111,11 @@
       .content-section {
         margin: 10px auto;
         padding: 2rem;
-        max-width: 1080px;
+        max-width: 90vw;
         text-align: left;
       }
       .content-title {
-        font-size: 1.5em;
+        font-size: 3em;
         font-weight: bold;
         margin-bottom: 10px;
       }
@@ -143,7 +142,7 @@
     <h1 class="main-title lag2">ANÁLISIS DE PÁGINAS WEB</h1>
     <h1 class="main-title lag1">ANÁLISIS DE PÁGINAS WEB</h1>
     <div id="intro" class="content-section">
-      <h2 class="content-title">Intro</h2>
+      <h2 class="content-title">INTRO</h2>
       <p class="content-body">This is the introduction section.</p>
     </div>
     <div id="web1" class="content-section">
@@ -152,7 +151,7 @@
           href="https://www.rayraylab.com"
           target="_blank"
           style="text-decoration: none; color: inherit"
-          >Web 1</a
+          >WEB 1 - rayraylab</a
         >
       </h2>
       <p class="content-body">
@@ -162,7 +161,7 @@
     </div>
     <iframe
       src="https://www.rayraylab.com"
-      width="90%"
+      width="91%"
       height="400"
       style="
         border: none;
@@ -179,7 +178,7 @@
           href="https://gehry.getty.edu"
           target="_blank"
           style="text-decoration: none; color: inherit"
-          >Web 2</a
+          >WEB 2 - gehry</a
         >
       </h2>
       <p class="content-body">
@@ -202,7 +201,7 @@
     </div>
     <iframe
       src="https://gehry.getty.edu"
-      width="90%"
+      width="91%"
       height="400"
       style="
         border: none;
@@ -219,7 +218,7 @@
           href="https://www.madebynull.com"
           target="_blank"
           style="text-decoration: none; color: inherit"
-          >Web 3</a
+          >WEB 3 - madebynull</a
         >
       </h2>
       <p class="content-body">
@@ -229,7 +228,7 @@
     </div>
     <iframe
       src="https://www.madebynull.com"
-      width="90%"
+      width="91%"
       height="400"
       style="
         border: none;
@@ -246,7 +245,7 @@
           href="https://www.dolsten.com"
           target="_blank"
           style="text-decoration: none; color: inherit"
-          >Web 4</a
+          >WEB 4 - dolsten</a
         >
       </h2>
       <p class="content-body">
@@ -256,7 +255,7 @@
     </div>
     <iframe
       src="https://www.dolsten.com"
-      width="90%"
+      width="91%"
       height="400"
       style="
         border: none;
