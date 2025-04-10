@@ -10,6 +10,12 @@
     <style>
       .image-container {
         position: relative;
+        width: 100%;
+        height: 100vh; /* Full viewport height */
+        background-image: url("images/fondo sow.png"); /* Replace with your image path */
+        background-size: cover; /* Ensure the image covers the entire container */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat;
         text-align: center;
       }
       .image-container img {
@@ -73,6 +79,18 @@
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         animation: sideToSide 2s steps(5) infinite;
       }
+      @media (max-width: 768px) {
+        .main-title {
+          font-size: 10vw; /* Slightly larger font size for smaller screens */
+        }
+      }
+
+      /* Adjust font size for very small screens */
+      @media (max-width: 480px) {
+        .main-title {
+          font-size: 12vw; /* Larger font size for very small screens */
+        }
+      }
       .main-title.lag1 {
         animation-delay: 0.2s;
         color: rgba(255, 255, 255, 0.8);
@@ -110,7 +128,9 @@
       }
 
       .content-section {
-        margin: 10px auto;
+        display: left;
+        flex-wrap: wrap;
+        margin: auto;
         padding: 2rem;
         max-width: 90vw;
         text-align: left;
@@ -142,6 +162,26 @@
         font-style: normal;
         font-size: 1, 5rem;
         line-height: 1.6;
+        text-align: justify; /* Justifica el texto para un diseño más limpio */
+        column-count: 2; /* Divide el texto en 2 columnas */
+        column-gap: 20px;
+        flex: 1 1 95%;
+        padding: 1rem;
+      }
+      @media (min-width: 300px) {
+        .content-body {
+          column-count: 1;
+        }
+      }
+      @media (min-width: 600px) {
+        .content-body {
+          column-count: 2;
+        }
+      }
+      @media (min-width: 900px) {
+        .content-body {
+          column-count: 3;
+        }
       }
       @font-face {
         font-family: "CustomFont";
@@ -170,7 +210,28 @@
     <h1 class="main-title lag1">ANÁLISIS DE PÁGINAS WEB</h1>
     <div id="intro" class="content-section">
       <h2 class="content-title">INTRO</h2>
-      <p class="content-body">This is the introduction section.</p>
+      <p class="content-body">
+        Esta página web contiene la Práctica 1- Nuevas tendencias del diseño web
+        de la asignatura de Fundamentos web. En esta asignatura, el diseño, la
+        estructura y la experiencia de usuario juegan un papel fundamental a la
+        hora de entender cómo se construyen las páginas web contemporáneas. En
+        este análisis exploro cuatro sitios web de agencias y estudios
+        creativos, sacadas de los links proporcionados, que destacan por su
+        innovación estética y técnica: Rayraylab, Sculpting Harmony (Getty +
+        Frank Gehry), Studio Null y Dolsten & Co.. Cada uno de estos sitios
+        presenta enfoques distintos en cuanto a diseño visual, interactividad,
+        uso de animaciones, tipografía, paleta de colores y estructura
+        responsive. A través de esta revisión busco identificar cómo estos
+        elementos no solo construyen una experiencia atractiva, sino que también
+        reflejan la identidad de marca y los valores de cada agencia. También he
+        querido demostrar que distintas interfaces, algunas más básicas y otras
+        más complejas, pueden tener el mismo impacto y efectividad. El objetivo
+        de este análisis es profundizar en la comprensión de los recursos
+        técnicos y estéticos que definen una web bien diseñada, y reflexionar
+        sobre cómo la programación, el diseño visual y la narrativa interactiva
+        se combinan para ofrecer experiencias digitales impactantes y
+        funcionales. .
+      </p>
     </div>
     <div id="web1" class="content-section">
       <h2 class="content-title">
@@ -216,6 +277,16 @@
         margin-top: 20px;
         border-radius: 10px;
         overflow: hidden;
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.2
+        ); /* Transparent background for glassmorphism */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+        backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+        -webkit-backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         flex: center;
       "
     >
@@ -270,6 +341,16 @@
         margin-top: 20px;
         border-radius: 10px;
         overflow: hidden;
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.2
+        ); /* Transparent background for glassmorphism */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+        backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+        -webkit-backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         flex: center;
       "
     >
@@ -284,8 +365,44 @@
         >
       </h2>
       <p class="content-body">
-        This is the body of text for the third section. It contains some
-        descriptive content.
+        Esta página web corresponde a una agencia creativa llamada Studio Null,
+        especializada en diseño de interacción, desarrollo web y branding. La
+        página destaca por su estética minimalista y casi vintage con el uso de
+        grano, una tipografía con serifa y un layout como el de un ordenador
+        antiguo. Destaca por su simpleza aunque no pierde la profesionalidad. En
+        cuanto a la estética, lo primero que observamos al ingresar es una
+        interfaz limpia y centrada, con una transición suave hacia un fondo con
+        un paisaje relajante, que recuerda al fondo de Windows de la pradera,
+        que generan una sensación de calma y sofisticación. Se utiliza una
+        tipografía sans-serif moderna, con un diseño claro y preciso que
+        refuerza la elegancia del sitio. Todo está cuidadosamente dispuesto para
+        guiar la mirada del usuario, desde los bloques de texto hasta los CTA,
+        que aparecen de forma destacada sin romper la armonía visual. Esta
+        página, a diferencia de las dos anteriores, no tiene un scroll para
+        navegar por la página de forma narrativa sino que es bastante más
+        estática, teniendo todos los apartados en el mismo punto de partida. La
+        paleta de colores se basa principalmente en azules, verdes y blancos o
+        colores neutros, lo que aporta serenidad y profesionalismo. Este uso del
+        color, combinado con la disposición ordenada de los elementos, construye
+        una experiencia visual sobria pero impactante, manteniéndose fiel a la
+        identidad de marca. Las animaciones en la página son suaves y discretas.
+        Por ejemplo, algunos elementos reaccionan al movimiento del ratón o
+        aparecen con transiciones al hacer scroll. Estas animaciones están bien
+        equilibradas y se integran de forma natural al diseño general, aportando
+        dinamismo sin distraer ni sobrecargar la experiencia. Le dan un aire
+        moderno a la navegación y refuerzan los valores de interacción y
+        creatividad de la agencia. Esto también la diferencia de las anteriores
+        analizadas ya que tiene muchas menos animaciones aunque aún así no
+        pierde su efecto y sigue siendo muy visualmente atractiva. Por último,
+        el sitio cuenta con un diseño completamente responsive. Se adapta
+        perfectamente a distintos tamaños de pantalla y dispositivos,
+        garantizando una experiencia coherente en móviles, tablets y
+        ordenadores. Esto demuestra una atención meticulosa tanto al diseño
+        visual como a la funcionalidad técnica. En conjunto, la web de Studio
+        Null es un ejemplo bueno de cómo combinar una estética cuidada,
+        animaciones bien ejecutadas pero minimalistas y diseño adaptable para
+        ofrecer una experiencia de usuario atractiva, eficiente y alineada con
+        los valores de una agencia creativa contemporánea.
       </p>
     </div>
     <iframe
@@ -297,6 +414,16 @@
         margin-top: 20px;
         border-radius: 10px;
         overflow: hidden;
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.2
+        ); /* Transparent background for glassmorphism */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+        backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+        -webkit-backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         flex: center;
       "
     >
@@ -311,8 +438,36 @@
         >
       </h2>
       <p class="content-body">
-        This is the body of text for the fourth section. It contains some
-        descriptive content.
+        ​Esta página web corresponde a Dolsten & Co., un estudio creativo que se
+        especializa en la integración de inteligencia artificial en el
+        desarrollo de contenido y experiencias para marcas y artistas. La página
+        destaca por su diseño moderno y dinámico, con animaciones fluidas y una
+        estructura que refleja la intersección del arte y la tecnología.​ Al
+        acceder al sitio, se observa una interfaz limpia y contemporánea que
+        utiliza una paleta de colores sobria y elegante, predominando tonos
+        pasteles y florales con acentos en colores vibrantes. La tipografía es
+        sans-serif, en tamaños grandes y con un peso destacado, lo que aporta
+        claridad y fuerza al mensaje. Las animaciones son suaves y responden de
+        manera intuitiva a las interacciones del usuario, como el desplazamiento
+        y el movimiento del cursor, lo que añade dinamismo y una sensación de
+        modernidad al navegar por el sitio.​ Se observan también transiciones de
+        letras borrosas a textos claros según el usuario hace scroll. Lo que más
+        me gusta de la estética de esta página web es el uso de flores tres de
+        que tienen un aspecto casi cristalino y representan muy bien la esencia
+        futurista y de la IA de la página web. El contenido está estructurado de
+        manera que resalta los proyectos destacados del estudio, incluyendo
+        innovaciones como "Arthur the Alien", "Dreamcaster" y "McEnroe vs
+        McEnroe". Cada proyecto se presenta con imágenes y descripciones que
+        permiten una comprensión rápida y atractiva de su alcance y creatividad.
+        Además, se destacan los numerosos premios y reconocimientos obtenidos
+        por el equipo. En cuanto a la adaptabilidad, el diseño responsive
+        garantiza una experiencia óptima en diversos dispositivos y tamaños de
+        pantalla, manteniendo la coherencia visual y funcional en móviles,
+        tabletas y ordenadores.​ En conjunto, el sitio web de Dolsten & Co.
+        ejemplifica cómo un diseño estético cuidadosamente elaborado, combinado
+        con animaciones interactivas y una estructura de contenido bien pensada,
+        puede comunicar eficazmente la identidad y los valores de una empresa
+        innovadora en el ámbito de la inteligencia artificial y la creatividad.​
       </p>
     </div>
     <iframe
@@ -324,6 +479,16 @@
         margin-top: 20px;
         border-radius: 10px;
         overflow: hidden;
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.2
+        ); /* Transparent background for glassmorphism */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+        backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+        -webkit-backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         flex: center;
       "
     >
