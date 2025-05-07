@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Página no encontrada</title>
+    <link rel="stylesheet" href="https://use.typekit.net/sfh5xje.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/sfh5xje.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "benton-modern-display", serif;
+        font-weight: 700; /* Bold weight */
+        font-style: italic; /* Italic style */
+        background: #ff5e9c;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .big-404 {
+        font-size: 50rem; /* Make the 404 much larger */
+        line-height: 1;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: -0.1em;
+        color: #ffffff; /* Fill color for the numbers */
+        -webkit-text-stroke: 10px #ff5e9c; /* Add a pink outline around the numbers */ /* Add spacing between the numbers */
+        opacity: 1; /* Make the 404 a subtle background */
+        position: absolute;
+        top: 50%;
+        left: 47%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+
+      .text-center {
+        position: relative;
+        z-index: 2; /* Place the text above the 404 */
+      }
+
+      .text-center p {
+        font-family: "montserrat", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1rem;
+        margin: 20px 0;
+        color: #000000; /* Change the color of the paragraph text */
+      }
+
+      a {
+        font-family: "montserrat", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.5rem;
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #ff5e9c;
+        background-color: #ffffff;
+        text-decoration: none;
+        border-radius: 20px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      a:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="big-404">
+      <span>4</span>
+      <span class="zero">0</span>
+      <span>4</span>
+    </div>
+    <div class="text-center">
+      <p>¡Oops! Page Not Found</p>
+      <a href="/">Volver al inicio</a>
+    </div>
+  </body>
+</html>

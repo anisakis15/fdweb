@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería Masonry con Columnas</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #f4f4f4;
+        padding: 2rem;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .masonry-column {
+        column-count: 3;
+        column-gap: 1rem;
+      }
+
+      .masonry-column img {
+        width: 100%;
+        margin-bottom: 1rem;
+        border-radius: 6px;
+        display: block;
+        break-inside: avoid;
+      }
+
+      @media (max-width: 768px) {
+        .masonry-column {
+          column-count: 2;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .masonry-column {
+          column-count: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Galería Masonry (Columnas)</h1>
+    <section class="masonry-column">
+      <img
+        src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97"
+        alt="imagen 1"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f"
+        alt="imagen 2"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c"
+        alt="imagen 3"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+        alt="imagen 4"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1541845157-a6d2d100c931?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80"
+        alt="imagen 5"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1558980663-3685c1d673c4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=60"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1588263823647-ce3546d42bfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80"
+      />
+    </section>
+  </body>
+</html>
