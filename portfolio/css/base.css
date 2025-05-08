@@ -23,7 +23,7 @@ h1 {
   font-family: "montserrat", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 5rem;
+  font-size: 4.5rem;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -36,7 +36,7 @@ h2 {
   font-weight: 500;
   font-style: normal;
   color: #ff5e9c;
-  font-size: 5rem;
+  font-size: 4rem;
   margin: -50px 0 20px; /* Negative top margin to overlap h1 */
   position: relative; /* Ensure proper stacking for overlap */
   z-index: 0;
@@ -59,12 +59,58 @@ button:hover {
   color: #ff5e9c; /* Change text color to pink */
   border: 2px solid #ff5e9c;
 }
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-10deg); /* Rotate slightly counterclockwise */
+  }
+  100% {
+    transform: rotate(10deg); /* Rotate slightly clockwise */
+  }
+}
+
+.rotating-image {
+  position: fixed;
+  width: clamp(15vw, 20%, 300px);
+  height: auto;
+  animation: rotate 1s infinite alternate;
+  opacity: 1;
+  z-index: -1;
+}
+.rotating-image.top-left {
+  width: clamp(50vw, 20%, 600px);
+  top: 2%;
+  left: 2%;
+  z-index: -1;
+}
+.rotating-image.top-right {
+  width: clamp(35vw, 20%, 300px);
+  top: 2%;
+  right: 2%;
+  z-index: -1;
+}
+.rotating-image.bottom-left {
+  width: clamp(35vw, 20%, 300px);
+  bottom: 2%; /* Position relative to the bottom of the screen */
+  left: 2%;
+  z-index: -1; /* Place behind the text */
+}
+.rotating-image.bottom-right {
+  width: clamp(50vw, 20%, 600px);
+  bottom: 5%; /* Position relative to the bottom of the screen */
+  right: 5%; /* Corrected comment */
+  z-index: -1; /* Place behind the text */
+}
 
 footer {
   font-size: 1rem;
   padding: 10px 0;
-  background-color: ff758c;
+  background-color: #ffffff; /* Added missing '#' for valid color */
   width: 100%;
+  stroke: #000000;
+  stroke-width: 2px;
 }
 
 footer a {
