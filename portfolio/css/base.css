@@ -40,6 +40,7 @@ h2 {
   margin: -50px 0 20px; /* Negative top margin to overlap h1 */
   position: relative; /* Ensure proper stacking for overlap */
   z-index: 0;
+  overflow: visible;
 }
 
 button {
@@ -70,6 +71,17 @@ button:hover {
     transform: rotate(10deg); /* Rotate slightly clockwise */
   }
 }
+@keyframes rotate-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg); /* Rotate slightly clockwise */
+  }
+  100% {
+    transform: rotate(-10deg); /* Rotate slightly counterclockwise */
+  }
+}
 
 .rotating-image {
   position: fixed;
@@ -80,25 +92,27 @@ button:hover {
   z-index: -1;
 }
 .rotating-image.top-left {
-  width: clamp(50vw, 20%, 600px);
+  width: clamp(30vw, 20%, 600px);
   top: 2%;
   left: 2%;
   z-index: -1;
 }
 .rotating-image.top-right {
-  width: clamp(35vw, 20%, 300px);
+  width: clamp(25vw, 20%, 300px);
   top: 2%;
   right: 2%;
   z-index: -1;
+  animation: rotate-reverse 2s infinite alternate;
 }
 .rotating-image.bottom-left {
-  width: clamp(35vw, 20%, 300px);
+  width: clamp(25vw, 20%, 300px);
   bottom: 2%; /* Position relative to the bottom of the screen */
   left: 2%;
-  z-index: -1; /* Place behind the text */
+  z-index: -1;
+  animation: rotate-reverse 2s infinite alternate; /* Place behind the text */
 }
 .rotating-image.bottom-right {
-  width: clamp(50vw, 20%, 600px);
+  width: clamp(30vw, 20%, 600px);
   bottom: 5%; /* Position relative to the bottom of the screen */
   right: 5%; /* Corrected comment */
   z-index: -1; /* Place behind the text */
