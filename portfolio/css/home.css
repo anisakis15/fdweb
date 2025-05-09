@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  line-height: 1.2;
+}
+
+.title-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  padding-left: 20px;
+}
+
+.title-main {
+  font-family: "montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 3.5rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1em;
+  position: relative; /* Ensure proper stacking for overlap */
+  z-index: 1;
+}
+
+.title-sub {
+  font-family: "sweet-fancy-script", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #ff5e9c;
+  font-size: 6rem;
+  margin: -50px 0 20px;
+  position: relative;
+  z-index: 0;
+  overflow: visible;
+}
+
+.about-title {
+  font-family: "montserrat", sans-serif; /* Italic script font */
+  font-size: clamp(1.2rem, 3vw, 1.5rem); /* Smaller, responsive font size */
+  font-style: italic;
+  color: #ff5e9c;
+  margin-bottom: 5px; /* Add spacing below the title */
+  letter-spacing: 1px; /* Slightly reduce letter spacing */
+  position: relative;
+  padding-left: 20px;
+}
+
+.about-text {
+  font-family: "montserrat", sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: #000000;
+  white-space: normal; /* Preserve line breaks */
+  margin: 0;
+  padding-left: 20px; /* Remove default margins */
+  padding-right: 20px; /* Add padding only on the right */
+  text-align: justify;
+  flex: 1 1 95%;
+  width: clamp(60vw, 80%, 600px);
+}
+
+.skills-list {
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  margin-top: 10px;
+  font-family: "montserrat", sans-serif;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.skills-title {
+  font-family: "montserrat", sans-serif; /* Italic script font */
+  font-size: clamp(1.2rem, 3vw, 1.5rem); /* Smaller, responsive font size */
+  font-style: italic;
+  color: #ff5e9c;
+  margin-bottom: 5px; /* Add spacing below the title */
+  letter-spacing: 1px; /* Slightly reduce letter spacing */
+  position: relative;
+  padding-left: 20px;
+}
