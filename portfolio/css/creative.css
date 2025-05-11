@@ -35,3 +35,77 @@ body {
   background-color: #ff5e9c; /* Pink background for active link */
   color: #ffffff; /* White text for active link */
 }
+.content-title {
+  font-family: "Montserrat", sans-serif; /* Use a clean, modern font */
+  font-size: clamp(1rem, 4vw, 2rem); /* Title font size */
+  font-weight: 700; /* Bold text */
+  margin-bottom: 10px;
+  margin-left: 50px;
+  align-items: flex-start; /* Add spacing above and below the title */
+}
+
+.highlight {
+  color: #ff5e9c; /* Pink color for highlighted text */
+}
+/* Content Section Layout */
+.content-section {
+  margin-left: 0px;
+  display: flex; /* Use flexbox to align text and image horizontally */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 10px; /* Reduce spacing between text and image */
+  margin: 0px auto; /* Equal margin on both sides */
+  align-items: flex-start; /* Align items to the top */
+  max-width: 1200px; /* Align items to the top */
+}
+
+/* Image Styling */
+.content-image {
+  margin-top: 20px;
+  margin-right: 50px;
+  margin-left: 50px;
+  flex: 1 1 20%; /* Image takes up 40% of the container */
+  display: flex;
+  justify-content: flex-start;
+  align-items: left; /* Center the image horizontally */
+}
+
+.content-image img {
+  width: 100%; /* Make the image responsive */
+  max-width: 300px; /* Limit the maximum width of the image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+/* Text Content Styling */
+.content-text {
+  margin-bottom: 5px;
+  margin-right: 50px;
+  flex: 60;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  justify-content: right; /* Text takes up 60% of the container */
+  font-family: "Montserrat", sans-serif;
+  color: #000000;
+  font-size: clamp(1rem, 2.5vw, 1.2rem); /* Responsive font size */
+  line-height: 1.6; /* Improve readability */
+  text-align: justify; /* Justify text for clean alignment */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column; /* Stack text and image vertically on smaller screens */
+    align-items: center; /* Center items on smaller screens */
+  }
+
+  .content-image,
+  .content-text {
+    flex: 1 1 100%; /* Make text and image take full width */
+  }
+
+  .content-image img {
+    max-width: 100%; /* Ensure the image scales properly on smaller screens */
+  }
+}
