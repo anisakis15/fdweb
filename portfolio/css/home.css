@@ -69,10 +69,11 @@ body {
   white-space: normal; /* Preserve line breaks */
   margin: 0;
   padding-left: 30px; /* Remove default margins */
-  padding-right: 20px; /* Add padding only on the right */
+  padding-right: 20px;
+  padding-bottom: 20px; /* Add padding only on the right */
   text-align: justify;
   flex: 1 1 95%;
-  width: clamp(50vw, 80%, 400px);
+  width: 80%;
 }
 
 .skills-list {
@@ -104,4 +105,31 @@ body {
   width: 100%;
   height: auto; /* Maintain aspect ratio */
   border-radius: 30px; /* Optional: Add rounded corners */
+}
+@media (max-width: 900px) {
+  .about-text {
+    max-width: 100%; /* Allow the text to take up the full width */
+    width: calc(100% - 60px); /* Extend to the full width minus padding */
+    padding-left: 15px; /* Adjust padding for smaller screens */
+    padding-right: 15px; /* Adjust padding for smaller screens */
+  }
+}
+footer {
+  background-color: #ffffff; /* White background */
+  text-align: center; /* Center-align the text */
+  /* Add vertical padding */
+  font-family: "Montserrat", sans-serif; /* Use Montserrat font */
+  font-size: 0.9rem; /* Slightly smaller font size */
+  color: #000000; /* Black text color */
+  border-top: 1px solid #e0e0e0; /* Optional: Add a subtle top border */
+}
+
+footer a {
+  color: #ff5e9c; /* Pink color for links */
+  text-decoration: none; /* Remove underline from links */
+  font-weight: bold; /* Make links bold */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Add underline on hover */
 }
