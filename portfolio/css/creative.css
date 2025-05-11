@@ -47,65 +47,17 @@ body {
 .highlight {
   color: #ff5e9c; /* Pink color for highlighted text */
 }
-/* Content Section Layout */
-.content-section {
-  margin-left: 0px;
-  display: flex; /* Use flexbox to align text and image horizontally */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  gap: 10px; /* Reduce spacing between text and image */
-  margin: 0px auto; /* Equal margin on both sides */
-  align-items: flex-start; /* Align items to the top */
-  max-width: 1200px; /* Align items to the top */
-}
-
-/* Image Styling */
-.content-image {
-  margin-top: 20px;
-  margin-right: 50px;
-  margin-left: 50px;
-  flex: 1 1 20%; /* Image takes up 40% of the container */
+.page-title-image {
   display: flex;
-  justify-content: flex-start;
-  align-items: left; /* Center the image horizontally */
+  justify-content: center; /* Center the image horizontally */
+  margin: 0 auto; /* Center the container */
+  width: 100vw; /* Make the container span the full viewport width */
+  overflow: hidden; /* Ensure no overflow if the image exceeds the height */
 }
 
-.content-image img {
-  width: 100%; /* Make the image responsive */
-  max-width: 300px; /* Limit the maximum width of the image */
+.page-title-image img {
+  width: 100%; /* Make the image responsive to the container width */
+  max-height: 600px; /* Limit the maximum height of the image */
+  object-fit: cover; /* Ensure the image scales properly without distortion */
   height: auto; /* Maintain aspect ratio */
-  border-radius: 10px; /* Optional: Add rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
-}
-
-/* Text Content Styling */
-.content-text {
-  margin-bottom: 5px;
-  margin-right: 50px;
-  flex: 60;
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  justify-content: right; /* Text takes up 60% of the container */
-  font-family: "Montserrat", sans-serif;
-  color: #000000;
-  font-size: clamp(1rem, 2.5vw, 1.2rem); /* Responsive font size */
-  line-height: 1.6; /* Improve readability */
-  text-align: justify; /* Justify text for clean alignment */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .content-section {
-    flex-direction: column; /* Stack text and image vertically on smaller screens */
-    align-items: center; /* Center items on smaller screens */
-  }
-
-  .content-image,
-  .content-text {
-    flex: 1 1 100%; /* Make text and image take full width */
-  }
-
-  .content-image img {
-    max-width: 100%; /* Ensure the image scales properly on smaller screens */
-  }
 }
