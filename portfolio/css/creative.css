@@ -1,17 +1,3 @@
-.page-title-image {
-  display: flex;
-  justify-content: center; /* Center the image horizontally */
-  margin: 0 auto; /* Center the container */
-  width: 100vw; /* Make the container span the full viewport width */
-  overflow: hidden; /* Ensure no overflow if the image exceeds the height */
-}
-
-.page-title-image img {
-  width: 100%; /* Make the image responsive to the container width */
-  max-height: 600px; /* Limit the maximum height of the image */
-  object-fit: cover; /* Ensure the image scales properly without distortion */
-  height: auto; /* Maintain aspect ratio */
-}
 .video-container {
   position: relative;
   padding-bottom: 56.25%; /* Aspect ratio: 16:9 */

@@ -18,7 +18,7 @@ body {
 
 .navbar a {
   font-family: "montserrat", sans-serif;
-  font-size: 1rem;
+  font-size: clamp (0.5rem, 4vw, 1rem) 1rem;
   text-decoration: none;
   color: #ff5e9c; /* Black text */
   padding: 10px 20px;
@@ -50,6 +50,14 @@ body {
   height: auto; /* Set a maximum height for the image */
   object-fit: cover; /* Ensure the image scales properly without distortion */
   display: block; /* Maintain aspect ratio */ /* Optional: Add rounded corners */
+}
+.content-section .gallo-image {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.content-section .zoneout {
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 .page-title {
   font-family: "Times New Roman", serif;
@@ -89,6 +97,56 @@ body {
 
 .content-text p {
   margin-bottom: 10px; /* Add spacing between paragraphs */
+}
+.image-row {
+  display: flex; /* Use flexbox to align images horizontally */
+  justify-content: center; /* Center the images horizontally */
+  align-items: center; /* Align images vertically */
+  margin: 5px auto; /* Center the row on the page */
+  width: 100%; /* Ensure the row spans the full width of the container */
+  padding: 0; /* Remove any padding */
+  box-sizing: border-box;
+  margin-bottom: 50px; /* Include padding and border in width calculation */
+}
+
+.image-row img {
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+  margin: 10px;
+}
+.paintings-gallery {
+  align-items: center;
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+  gap: 20px; /* Add spacing between images */
+  margin: 20px auto;
+  margin-left: 30px;
+  margin-right: 30px; /* Center the gallery and add spacing above and below */
+  /* Limit the maximum width of the gallery */
+  padding: 0 20px; /* Add padding on the sides */
+}
+
+.paintings-gallery img {
+  width: 100%; /* Make images responsive */
+  height: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .paintings-gallery {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Reduce to 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .paintings-gallery {
+    grid-template-columns: 1fr; /* Stack images in a single column on very small screens */
+  }
 }
 footer {
   background-color: #ffffff; /* White background */

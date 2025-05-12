@@ -38,7 +38,8 @@
   justify-content: space-evenly; /* Evenly space the images */
   margin: 20px 0; /* Add spacing above and below the row */
   padding: 0; /* Remove padding */
-  width: 100%; /* Ensure the row spans the full width of the container */
+  width: 100%;
+  margin-bottom: 60px; /* Ensure the row spans the full width of the container */
 }
 
 .image-row.spaced img {
