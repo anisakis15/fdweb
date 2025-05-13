@@ -44,7 +44,9 @@
 
       .text-center {
         position: relative;
-        z-index: 2; /* Place the text above the 404 */
+        z-index: 2;
+        font-size: 1.5rem;
+        padding: 20px;
       }
 
       .text-center p {
@@ -52,7 +54,7 @@
         font-weight: 400;
         font-style: normal;
         font-size: 1rem;
-        margin: 20px 0;
+        margin-bottom: 20px;
         color: #000000; /* Change the color of the paragraph text */
       }
 
@@ -76,6 +78,48 @@
       a:hover {
         transform: scale(1.1);
         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      }
+      @media (max-width: 1200px) {
+        .big-404 {
+          font-size: 30rem; /* Reduce font size for smaller screens */
+          -webkit-text-stroke: 8px #ff5e9c; /* Adjust stroke size */
+        }
+
+        .text-center {
+          font-size: 1.2rem; /* Adjust text size */
+        }
+      }
+
+      @media (max-width: 768px) {
+        .big-404 {
+          font-size: 20rem; /* Further reduce font size for tablets */
+          -webkit-text-stroke: 6px #ff5e9c;
+        }
+
+        .text-center {
+          font-size: 1rem;
+        }
+
+        .text-center a {
+          font-size: 0.9rem;
+          padding: 8px 16px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .big-404 {
+          font-size: 10rem; /* Reduce font size for mobile devices */
+          -webkit-text-stroke: 4px #ff5e9c;
+        }
+
+        .text-center {
+          font-size: 0.9rem;
+        }
+
+        .text-center a {
+          font-size: 0.8rem;
+          padding: 6px 12px;
+        }
       }
     </style>
   </head>
