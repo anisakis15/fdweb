@@ -1,5 +1,5 @@
-@import url("http://meyerweb.com/eric/tools/css/reset/reset.css"); /* CSS Reset para compatibilidad entre navegadores */
-@import "theme.css";
-@import url("main.css"); /* Estilos principales */
-@import "types.css";
 @import "base.css";
+@import "home.css";
+@import "packaging.css";
+@import "portfolio.css";
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"); /* Example script font */
