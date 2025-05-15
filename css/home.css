@@ -17,7 +17,12 @@ body {
   top: 0;
   z-index: 1000;
 }
-
+.navbar-links {
+  justify-content: space-evenly;
+  display: flex;
+  flex: 1;
+  gap: 15px;
+}
 .navbar a {
   font-family: "montserrat", sans-serif;
   font-size: clamp (0.5rem, 4vw, 1rem) 1rem;
@@ -37,6 +42,49 @@ body {
 .navbar a.active {
   background-color: #ff5e9c; /* Pink background for active link */
   color: #ffffff; /* White text for active link */
+}
+.menu-toggle {
+  display: none; /* Hide the checkbox */
+}
+
+.hamburger-menu {
+  display: none; /* Hide the hamburger menu by default */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #ff5e9c;
+  border-radius: 2px;
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+  .navbar-links {
+    display: none;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-toggle:checked ~ .navbar-links {
+    display: flex; /* Show the links when the checkbox is checked */
+  }
+
+  .hamburger-menu {
+    display: flex; /* Show the hamburger menu on smaller screens */
+  }
 }
 .content-container {
   margin-top: 30px;
